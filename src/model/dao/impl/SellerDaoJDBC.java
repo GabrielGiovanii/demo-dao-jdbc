@@ -106,6 +106,9 @@ public class SellerDaoJDBC implements SellerDao {
 		catch(Exception ex) {
 			throw new DbException(ex.getMessage());
 		}
+		finally {
+			DB.closeStatement(ps);
+		}
 	}
 
 	@Override
