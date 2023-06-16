@@ -5,6 +5,7 @@ import java.util.Scanner;
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
+import model.entities.Seller;
 
 public class Program2 {
 
@@ -26,6 +27,10 @@ public class Program2 {
 		int idForDelete = sc.nextInt();
 		departmentDao.deleteById(idForDelete);
 		System.out.println("All right!");
+		
+		System.out.println("\n===  TESTE 4: department findById ===");
+		Department findByIdDepartment = departmentDao.findById(2);
+		System.out.println(findByIdDepartment);
 		
 		sc.next();
 	}
